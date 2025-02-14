@@ -11,7 +11,7 @@ import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { addUser } from "../utils/useSlice";
+import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -56,7 +56,7 @@ const Login = () => {
               dispatch(
                 addUser({ uid: uid, email: email, displayName: displayName })
               );
-              navigate("/browse");
+              // navigate("/browse");
             })
             .catch((error) => {
               setErrorMessage(error.message);
@@ -76,7 +76,7 @@ const Login = () => {
         password.current.value
       )
         .then((userCredential) => {
-          navigate("/browse");
+          // navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
