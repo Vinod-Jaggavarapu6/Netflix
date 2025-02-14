@@ -5,3 +5,25 @@ export const NETFLIX_BG_IMG_URL =
 
 export const NETFLIX_USER_IMG_URL =
   "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg";
+
+export const IMDB_FETCH_API_OPTIONS = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization: `Bearer ${process.env.REACT_APP_IMDB_API_AUTH_KEY}`,
+  },
+};
+
+export const IMDB_UPCOMING_MOVIES_URL =
+  "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1";
+export const IMDB_NOW_PLAYING_URL =
+  "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
+
+export const IMDB_TOPRATED_MOVIES_URL =
+  "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
+export const IMDB_POPULAR_MOVIES_URL =
+  "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
+
+export const IMDB_MOVIE_VIDEOS_URL = "https://api.themoviedb.org/3/movie";
+
+export const IMDB_MOVIE_POSTER_URL = "https://image.tmdb.org/t/p/w500";
